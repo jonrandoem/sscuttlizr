@@ -1,17 +1,21 @@
 sscuttlizr
 ==========
 
-###About
+About
+------------
 
-Sscuttlizr is a theme for SemanticScuttle 0.98.5. It includes Modernizr, Bootstrap and Font-Awesome, is completely responsive, and includes most of HTML5 Boilerplate hooks and features.
+Sscuttlizr is a theme for SemanticScuttle 0.98.5 (http://sourceforge.net/projects/semanticscuttle/). It includes Modernizr, Bootstrap and Font-Awesome, is completely responsive, and includes most of HTML5 Boilerplate hooks and features.
 It is visually based on SemanticScuttle's default theme, but is slightly different in some opinionated details.
 
 This theme is licensed under [MIT License](https://github.com/jonrandoem/sscuttlizr/blob/master/LICENSE).
 
 Version: 1.1.0
 
+This theme has been tested on the version 0.98.5 of SemanticScuttle
 
-###Installation
+
+Installation
+------------
 
 1. Unzip theme and template
 2. Copy all the content of the "www" & "data" folders to their respective places in your SemanticScuttle installation
@@ -23,10 +27,8 @@ $theme = 'sscuttlizr';
 
 
 
-Features
+Theme features
 ------------
-
-###Theme features
 
 * Completely responsive
 * Uses latest Bootstrap & Font-Awesome
@@ -37,7 +39,8 @@ Features
 * Use of Font-Awesome icons
 * Hooks from HTML5Boilerplate: Apache server config (via .htaccess), ChromeFrame, crossdomain.xml
 
-###QR-Codes
+Optionnal QR-Codes
+------------
 
 This theme adds the possibility to generate on-demand QR-Codes for each bookmark. This feature does not rely on any QR service; it generates the QR codes by itself.
 This feature uses [Jerome Etienne](http://blog.jetienne.com/ "Jerome Etienne's blog")'s [QR-Code plugin for jQuery](https://github.com/jeromeetienne/jquery-qrcode "QR-Code plugin for jQuery").
@@ -51,7 +54,8 @@ $enableQrCodes = true;
 ```
 
 
-###.htaccess
+Optionnal .htaccess
+------------
 
 Sscuttlizr includes a .htaccess file, which is the Apache configuration file optimized for HTML5 Boilerplate (v2.0.0). This file can only be used if you have Apache as a web server.
 This file is needed for some features, including ChromeFrame.
@@ -63,7 +67,8 @@ In addition to H5BP's server config, the file also includes the specific rules f
 The content of this file is quite opinionated; you can choose not to include it (and keep SemanticScuttle's original .htaccess file), or to customize it the way you want.
 
 
-###crossdomain.xml
+Optionnal crossdomain.xml
+------------
 
 Sscuttlizr includes a restrictive crossdomain.xml file.
 
