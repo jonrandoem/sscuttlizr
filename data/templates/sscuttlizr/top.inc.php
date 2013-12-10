@@ -34,7 +34,7 @@
 		<script type="text/javascript" src="<?php echo ROOT ?>js/sscuttlizr/bootstrap.min.js"></script>
 	<?php endif ?>
 	<?php
-	if ( isset($bookmarks) && ! empty($bookmarks) ) {
+	if ( isset($bookmarks) && ! empty($bookmarks) && isset($GLOBALS['enableQrCodes']) && $GLOBALS['enableQrCodes'] == true ) {
 		?>
 		<script type="text/javascript" src="<?php echo ROOT ?>js/sscuttlizr/jquery.qrcode.min.js"></script>
 		<?php

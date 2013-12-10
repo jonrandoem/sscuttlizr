@@ -111,6 +111,7 @@ if($userservice->isLoggedOn()) {
 <?php if (isset($bookmarks) && count($bookmarks) > 0) { ?>
 <script type="text/javascript">
 window.onload = playerLoad;
+<?php if ( isset($GLOBALS['enableQrCodes']) && $GLOBALS['enableQrCodes'] == true ) { ?>
 jQuery(document).ready(function () {
 	jQuery('.qr-code-load').click(function() {
 		var bk = jQuery(this).parent().parent();
@@ -128,6 +129,7 @@ jQuery(document).ready(function () {
 		return false;
 	});
 });
+<?php } ?>
 </script>
 <div class="container-full">
 	<div class="row">
@@ -455,9 +457,11 @@ if ($currenttag!= '') {
             . $cats . "\n"
             . $copy . "\n"
             . $edit . "\n"
-            . $update . "\n"
-						. '<a href="#" class="qr-code-load"><i class="fa fa-qrcode"></i> QR Code</a>' . "\n"
-            . "  </div>\n";
+            . $update . "\n";
+		if ( isset($GLOBALS['enableQrCodes']) && $GLOBALS['enableQrCodes'] == true ) {
+			echo '<a href="#" class="qr-code-load"><i class="fa fa-qrcode"></i> QR Code</a>' . "\n";
+		}
+		echo "  </div>\n";
 		echo $privateNoteField != ''
             ? '    <div class="privateNote" title="'. T_('Private Note on this bookmark') .'">'.$privateNoteField."</div>\n"
             : '';
