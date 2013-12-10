@@ -645,3 +645,23 @@ FileETag None
 # <IfModule mod_headers.c>
 # Header set Connection Keep-Alive
 # </IfModule>
+
+
+# ------------------------------------------------------------------------------
+# | SemanticScuttle specifics |
+# ------------------------------------------------------------------------------
+
+#####################################
+# the first part of this file is used if you configure your scuttle for nice urls
+# (see $cleanurls in config.inc.php)
+#####################################
+
+
+# Rewrite clean URLs onto real files
+<IfModule mod_rewrite.c>
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/.]+)/?(.*)$ /$1.php/$2 [QSA,L]
+RewriteRule ^api/([a-z]+)/([a-z]+) /api/$1_$2.php
+</IfModule>

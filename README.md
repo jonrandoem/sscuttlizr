@@ -58,7 +58,9 @@ This file is needed for some features, including ChromeFrame.
 
 See details about [H5BP's .htaccess](https://github.com/h5bp/server-configs-apache).
 
-The content of this file is quite opinionated; you can choose not to include it, or to customize it the way you want.
+In addition to H5BP's server config, the file also includes the specific rules for SemanticScuttle (that are used for clean URLs).
+
+The content of this file is quite opinionated; you can choose not to include it (and keep SemanticScuttle's original .htaccess file), or to customize it the way you want.
 
 
 ###crossdomain.xml
