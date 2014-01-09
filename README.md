@@ -53,6 +53,21 @@ By default, this functionality is disabled. To enable it, open your config.php f
 $enableQrCodes = true;
 ```
 
+Optionnal support for Piwik Analytics
+------------
+
+Sscuttlizr has support for Piwik Analytics if you need it.
+
+By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
+
+```
+$piwikAnalyticsSiteId = '1';
+$piwikAnalyticsUrl = 'your.piwik.com';
+```
+
+Notes: Do not enter any http:// or https:// in the URL, and enter your Piwik site ID between quotes.
+
+
 
 Optionnal .htaccess
 ------------

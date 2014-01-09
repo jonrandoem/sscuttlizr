@@ -31,6 +31,11 @@ pageTracker._trackPageview();
 
 <?php endif;?>
 
+
+<?php if(isset($GLOBALS['piwikAnalyticsSiteId']) && $GLOBALS['piwikAnalyticsSiteId']!= '' && isset($GLOBALS['piwikAnalyticsUrl']) && $GLOBALS['piwikAnalyticsUrl']!= ''):?>
+<?php include('piwik.php'); ?>
+<?php endif;?>
+
 </body>
 </html>
 <!--
