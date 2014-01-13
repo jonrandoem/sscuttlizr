@@ -130,6 +130,29 @@ jQuery(document).ready(function () {
 	});
 });
 <?php } ?>
+<?php if ( isset($GLOBALS['pocheUrl']) && $GLOBALS['pocheUrl'] != '' ) { ?>
+jQuery(document).ready(function () {
+	jQuery('.poche-share').click(function() {
+		var bk = jQuery(this).parent().parent();
+		var url = bk.find('.link a').attr('href');
+		url = '<?php echo $GLOBALS['pocheUrl']; ?>/index.php?action=add&plainurl=' + encodeURIComponent(url) + '&autoclose=true';
+		window.open(url, 'poche', 'toolbar=no,width=800,height=600');
+		return false;
+	});
+});
+<?php } ?>
+<?php if ( isset($GLOBALS['yourlsUrl']) && $GLOBALS['yourlsUrl'] != '' && isset($GLOBALS['yourlsApiKey']) && preg_match('#^[a-z0-9]{10}$#', $GLOBALS['yourlsApiKey']) ) { ?>
+jQuery(document).ready(function () {
+	jQuery('.yourls-share').click(function() {
+		var bk = jQuery(this).parent().parent();
+		var url = bk.find('.link a').attr('href');
+		var title = bk.find('.link a').html();
+		url = '<?php echo $GLOBALS['yourlsUrl']; ?>?signature=<?php echo $GLOBALS['yourlsApiKey']; ?>&action=shorturl&format=simple&url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title);
+		window.open(url, 'yourls', 'toolbar=no,width=800,height=600');
+		return false;
+	});
+});
+<?php } ?>
 </script>
 <div class="container-full">
 	<div class="row">
@@ -460,6 +483,12 @@ if ($currenttag!= '') {
             . $update . "\n";
 		if ( isset($GLOBALS['enableQrCodes']) && $GLOBALS['enableQrCodes'] == true ) {
 			echo '<a href="#" class="qr-code-load"><i class="fa fa-qrcode"></i> QR Code</a>' . "\n";
+		}
+		if ( isset($GLOBALS['pocheUrl']) && $GLOBALS['pocheUrl'] != '' ) {
+			echo '<a href="#" class="poche-share"><img src="' . $theme->resource('images/poche.png') . '" /> Poche</a>' . "\n";
+		}
+		if ( isset($GLOBALS['yourlsUrl']) && $GLOBALS['yourlsUrl'] != '' && isset($GLOBALS['yourlsApiKey']) && preg_match('#^[a-z0-9]{10}$#', $GLOBALS['yourlsApiKey']) ) {
+			echo '<a href="#" class="yourls-share"><img src="' . $theme->resource('images/yourls.png') . '" /> Yourls</a>' . "\n";
 		}
 		echo "  </div>\n";
 		echo $privateNoteField != ''

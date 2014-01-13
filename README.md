@@ -38,35 +38,9 @@ Theme features
 * Use of Bootstrap components (Alert, Grid, Navbar, Forms)
 * Use of Font-Awesome icons
 * Hooks from HTML5Boilerplate: Apache server config (via .htaccess), ChromeFrame, crossdomain.xml
-
-Optionnal QR-Codes
-------------
-
-This theme adds the possibility to generate on-demand QR-Codes for each bookmark. This feature does not rely on any QR service; it generates the QR codes by itself.
-This feature uses [Jerome Etienne](http://blog.jetienne.com/ "Jerome Etienne's blog")'s [QR-Code plugin for jQuery](https://github.com/jeromeetienne/jquery-qrcode "QR-Code plugin for jQuery").
-
-The Qr-Codes are drawn in a canvas, but should be drawn in HTML tables in browser that don't support canvas. The detection of support for canvas is made with Modernizr.
-
-By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
-
-```
-$enableQrCodes = true;
-```
-
-Optionnal support for Piwik Analytics
-------------
-
-Sscuttlizr has support for Piwik Analytics if you need it.
-
-By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
-
-```
-$piwikAnalyticsSiteId = '1';
-$piwikAnalyticsUrl = 'your.piwik.com';
-```
-
-Notes: Do not enter any http:// or https:// in the URL, and enter your Piwik site ID between quotes.
-
+* Optional support for [Piwik](http://piwik.org/) Analytics
+* Optional support for sharing with [Poche](http://www.inthepoche.com/en)
+* Optional support for shortening with Yourls
 
 
 Optionnal .htaccess
@@ -88,6 +62,71 @@ Optionnal crossdomain.xml
 Sscuttlizr includes a restrictive crossdomain.xml file.
 
 The content of this file is quite opinionated; you can choose not to include it, or to customize it the way you want.
+
+
+Optionnal QR-Codes
+------------
+
+This theme adds the possibility to generate on-demand QR-Codes for each bookmark. This feature does not rely on any QR service; it generates the QR codes by itself.
+This feature uses [Jerome Etienne](http://blog.jetienne.com/ "Jerome Etienne's blog")'s [QR-Code plugin for jQuery](https://github.com/jeromeetienne/jquery-qrcode "QR-Code plugin for jQuery").
+
+The Qr-Codes are drawn in a canvas, but should be drawn in HTML tables in browser that don't support canvas. The detection of support for canvas is made with Modernizr.
+
+By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
+
+```
+$enableQrCodes = true;
+```
+
+Optionnal support for Piwik Analytics
+------------
+
+Sscuttlizr has support for [Piwik](http://piwik.org/) Analytics if you need it.
+
+You must have a functional Piwik installation to use this feature.
+
+By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
+
+```
+$piwikAnalyticsSiteId = '1';
+$piwikAnalyticsUrl = 'your.piwik.com';
+```
+
+Notes: Do not enter any http:// or https:// in the URL, and enter your Piwik site ID between quotes.
+
+
+
+Optionnal support for Poche
+------------
+
+Sscuttlizr has support for [Poche](http://www.inthepoche.com/en) as a bookmark sharing tool.
+
+You must have a functional Poche installation to use this feature.
+
+By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
+
+```
+$pocheUrl = 'https://my-poche.com';
+```
+Notes: No trailing slash at the end of the URL !!
+
+
+
+Optionnal support for Yourls
+------------
+
+Sscuttlizr has support for [Yourls](http://yourls.org/) as a URL shortener.
+
+You must have a functional Yourls installation to use this feature.
+
+By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
+
+```
+$yourlsUrl = 'https://my-yourls.com/yourls-api.php';
+$yourlsApiKey = 'a1b2c3d4e5';
+```
+
+Notes: Be sure you enter the Yourls API path (e.g. yourls-api.php)
 
 
 
