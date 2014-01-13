@@ -1,8 +1,0 @@
-[Dolphin]
-Timestamp=2013,12,10,14,34,4
-Version=3
-ViewMode=1
-VisibleRoles=Details_text,Details_size,Details_date,Details_permissions,Details_owner,Details_group,CustomizedDetails
-
-[Settings]
-HiddenFilesShown=true
