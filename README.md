@@ -7,7 +7,7 @@ About
 Sscuttlizr is a theme for [SemanticScuttle](http://semanticscuttle.sourceforge.net/) 0.98.5 (http://sourceforge.net/projects/semanticscuttle/). It includes Modernizr, Bootstrap and Font-Awesome, is completely responsive, and includes most of HTML5 Boilerplate hooks and features.
 It is visually based on SemanticScuttle's default theme, but is slightly different in some opinionated details.
 
-Version: 1.2.0
+Version: 1.2.1
 
 This theme has been tested on the version 0.98.5 of SemanticScuttle
 
