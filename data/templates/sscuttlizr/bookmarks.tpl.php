@@ -147,7 +147,7 @@ jQuery(document).ready(function () {
 		var bk = jQuery(this).parent().parent();
 		var url = bk.find('.link a').attr('href');
 		var title = bk.find('.link a').html();
-		url = '<?php echo $GLOBALS['yourlsUrl']; ?>?signature=<?php echo $GLOBALS['yourlsApiKey']; ?>&action=shorturl&format=simple&url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title);
+		url = '<?php echo $GLOBALS['yourlsUrl']; ?>?signature=<?php echo $GLOBALS['yourlsApiKey']; ?>&action=shorturl&format=simple&url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title) + '&autoclose=true';
 		window.open(url, 'yourls', 'toolbar=no,width=800,height=600');
 		return false;
 	});

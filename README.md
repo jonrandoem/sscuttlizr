@@ -4,12 +4,10 @@ sscuttlizr
 About
 ------------
 
-Sscuttlizr is a theme for SemanticScuttle 0.98.5 (http://sourceforge.net/projects/semanticscuttle/). It includes Modernizr, Bootstrap and Font-Awesome, is completely responsive, and includes most of HTML5 Boilerplate hooks and features.
+Sscuttlizr is a theme for [SemanticScuttle](http://semanticscuttle.sourceforge.net/) 0.98.5 (http://sourceforge.net/projects/semanticscuttle/). It includes Modernizr, Bootstrap and Font-Awesome, is completely responsive, and includes most of HTML5 Boilerplate hooks and features.
 It is visually based on SemanticScuttle's default theme, but is slightly different in some opinionated details.
 
-This theme is licensed under [MIT License](https://github.com/jonrandoem/sscuttlizr/blob/master/LICENSE).
-
-Version: 1.1.0
+Version: 1.2.0
 
 This theme has been tested on the version 0.98.5 of SemanticScuttle
 
@@ -40,7 +38,7 @@ Theme features
 * Hooks from HTML5Boilerplate: Apache server config (via .htaccess), ChromeFrame, crossdomain.xml
 * Optional support for [Piwik](http://piwik.org/) Analytics
 * Optional support for sharing with [Poche](http://www.inthepoche.com/en)
-* Optional support for shortening with Yourls
+* Optional support for shortening with [Yourls](http://yourls.org/)
 
 
 Optionnal .htaccess
@@ -56,12 +54,14 @@ In addition to H5BP's server config, the file also includes the specific rules f
 The content of this file is quite opinionated; you can choose not to include it (and keep SemanticScuttle's original .htaccess file), or to customize it the way you want.
 
 
+
 Optionnal crossdomain.xml
 ------------
 
 Sscuttlizr includes a restrictive crossdomain.xml file.
 
 The content of this file is quite opinionated; you can choose not to include it, or to customize it the way you want.
+
 
 
 Optionnal QR-Codes
@@ -77,6 +77,8 @@ By default, this functionality is disabled. To enable it, open your config.php f
 ```
 $enableQrCodes = true;
 ```
+
+
 
 Optionnal support for Piwik Analytics
 ------------
@@ -126,7 +128,7 @@ $yourlsUrl = 'https://my-yourls.com/yourls-api.php';
 $yourlsApiKey = 'a1b2c3d4e5';
 ```
 
-Notes: Be sure you enter the Yourls API path (e.g. yourls-api.php)
+Notes: Be sure to enter the Yourls API path (e.g. yourls-api.php)
 
 
 
@@ -138,8 +140,18 @@ Credits
 * Modernizr [Website](http://modernizr.com/) | [MIT License](http://modernizr.com/license/)
 * Font-Awesome [Website](http://fontawesome.io/) | [Sil OFL 1.1 + MIT License](http://fontawesome.io/license/)
 * jQuery QR-Code [Website](http://jeromeetienne.github.io/jquery-qrcode/) | [MIT License](https://github.com/jeromeetienne/jquery-qrcode/blob/master/MIT-LICENSE.txt)
-* HTMLBoilerplate [Website](http://html5boilerplate.com/) | [MIT License](https://github.com/h5bp/html5-boilerplate/blob/master/LICENSE.md)
+* HTML5Boilerplate [Website](http://html5boilerplate.com/) | [MIT License](https://github.com/h5bp/html5-boilerplate/blob/master/LICENSE.md)
 * H5BP .htaccess [Website](https://github.com/h5bp/server-configs-apache) | [MIT License](https://github.com/h5bp/server-configs-apache/blob/master/LICENSE.md)
 
+Thanks to 
+
+* [SemanticScuttle](http://semanticscuttle.sourceforge.net/)
+* [Piwik](http://piwik.org/)
+* [Poche](http://www.inthepoche.com/en)
+* [Yourls](http://yourls.org/)
 
 
+License
+------------
+
+This theme is licensed under [MIT License](https://github.com/jonrandoem/sscuttlizr/blob/master/LICENSE).
