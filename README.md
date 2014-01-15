@@ -142,7 +142,7 @@ By default, this functionality is disabled. To enable it, open your config.php f
 
 ```
 $enableJappix = true;
-$jappixUrl = "https://chat.my-kwipi.com";
+$jappixUrl = "https://chat.my-domain.com";
 $jappixAuth = true;
 $jappixUser = "john";
 $jappixPassword = "password";
@@ -180,6 +180,7 @@ Thanks to
 * [Piwik](http://piwik.org/)
 * [Poche](http://www.inthepoche.com/en)
 * [Yourls](http://yourls.org/)
+* [Jappix](http://jappix.org/)
 
 
 License
