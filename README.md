@@ -95,6 +95,17 @@ $piwikAnalyticsUrl = 'your.piwik.com';
 
 Notes: Do not enter any http:// or https:// in the URL, and enter your Piwik site ID between quotes.
 
+You can also enable the "noscript" image:
+
+```
+$piwikAnalyticsNoScript = true;
+```
+
+And if you enable the "noscript" and your Piwik installation is served with HTTPS, you can force HTTPS for the "noscript" image:
+
+```
+$piwikAnalyticsNoScriptHttps = true;
+```
 
 
 Optionnal support for Poche
