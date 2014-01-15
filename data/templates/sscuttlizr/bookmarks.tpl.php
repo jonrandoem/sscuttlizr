@@ -115,17 +115,21 @@ window.onload = playerLoad;
 jQuery(document).ready(function () {
 	jQuery('.qr-code-load').click(function() {
 		var bk = jQuery(this).parent().parent();
-		bk.find('.qr-code').html('<div class="qrcodeCanvas"></div>');
-		var o = {
-			text: bk.find('.link a').attr('href'),
-			width: 128,
-			height: 128
-		};
-		if ( ! jQuery('html.canvas').length ) {
-			o.render = "table";
+		if ( bk.find('.qr-code .qrcodeCanvas').length > 0 ) {
+			bk.find('.qr-code').find('.qrcodeCanvas').remove();
+		} else {
+			bk.find('.qr-code').html('<div class="qrcodeCanvas"></div>');
+			var o = {
+				text: bk.find('.link a').attr('href'),
+				width: 128,
+				height: 128
+			};
+			if ( ! jQuery('html.canvas').length ) {
+				o.render = "table";
+			}
+			bk.find('.qr-code .qrcodeCanvas').qrcode(o);
+			bk.find('.qr-code').show();
 		}
-		bk.find('.qr-code .qrcodeCanvas').qrcode(o);
-		bk.find('.qr-code').show();
 		return false;
 	});
 });
