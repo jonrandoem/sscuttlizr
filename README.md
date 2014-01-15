@@ -7,9 +7,7 @@ About
 Sscuttlizr is a theme for [SemanticScuttle](http://semanticscuttle.sourceforge.net/) 0.98.5 (http://sourceforge.net/projects/semanticscuttle/). It includes Modernizr, Bootstrap and Font-Awesome, is completely responsive, and includes most of HTML5 Boilerplate hooks and features.
 It is visually based on SemanticScuttle's default theme, but is slightly different in some opinionated details.
 
-Version: 1.2.1
-
-This theme has been tested on the version 0.98.5 of SemanticScuttle
+This theme has been tested on the version 0.98.5 of SemanticScuttle.
 
 
 Installation
@@ -39,6 +37,7 @@ Theme features
 * Optional support for [Piwik](http://piwik.org/) Analytics
 * Optional support for sharing with [Poche](http://www.inthepoche.com/en)
 * Optional support for shortening with [Yourls](http://yourls.org/)
+* Optional support for [Jappix](http://jappix.org/) chat
 
 
 Optionnal .htaccess
@@ -129,6 +128,38 @@ $yourlsApiKey = 'a1b2c3d4e5';
 ```
 
 Notes: Be sure to enter the Yourls API path (e.g. yourls-api.php)
+
+
+
+Optionnal support for Jappix Mini
+------------
+
+Sscuttlizr has support for [Jappix](http://jappix.org/) as a chat tool.
+
+You must have a functional Jappix installation to use this feature.
+
+By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
+
+```
+$enableJappix = true;
+$jappixUrl = "https://chat.my-kwipi.com";
+$jappixAuth = true;
+$jappixUser = "john";
+$jappixPassword = "password";
+$jappixDomain = "my-domain.com";
+$jappixNickname = 'j0n';
+$jappixResource = "MySemanticScuttle";
+```
+
+Notes: 
+
+* No trailing slash at the end of the URL !!
+* If you want to enable an anonymous mode, just set:
+
+```
+$jappixAuth = false;
+```
+
 
 
 

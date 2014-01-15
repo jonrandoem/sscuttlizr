@@ -16,8 +16,54 @@ if($GLOBALS['enableWebsiteThumbnails']) {
 
 </div>
 
+<?php if(isset($GLOBALS['enableJappix']) && $GLOBALS['enableJappix'] == true) { ?>
+<script type="text/javascript">
+	jQuery.ajaxSetup({cache: true});
 
-<?php if(isset($GLOBALS['googleAnalyticsCode']) && $GLOBALS['googleAnalyticsCode']!= ''):?>
+	jQuery.getScript("<?php echo $GLOBALS['jappixUrl']; ?>/get.php?l=fr&t=js&g=mini.xml", function() {
+		JappixMini.launch({
+			connection: {
+				<?php if ( isset($GLOBALS['jappixAuth']) && $GLOBALS['jappixAuth'] == true ) {
+					echo 'user: \'' . $GLOBALS['jappixUser'] . '\',';
+					echo 'password: \'' . $GLOBALS['jappixPassword'] . '\',';
+				} ?>
+				domain: '<?php echo $GLOBALS['jappixDomain']; ?>',
+				resource: '<?php echo $GLOBALS['jappixResource']; ?>'
+			},
+			
+			application: {
+				network: {
+					autoconnect: false
+				},
+
+				interface: {
+					showpane: true,
+					animate: true
+				},
+
+				user: {
+					random_nickname: true,
+					nickname: '<?php echo $GLOBALS['jappixNickname']; ?>'
+				},
+
+				chat: {
+					open: []
+				},
+
+				groupchat: {
+					open: [],
+					open_passwords: []
+				}
+			}
+		});
+		jQuery('#jappix_mini a.jm_pane').css('height', '25px');
+	});
+</script>
+
+<?php } ?>
+
+
+<?php if(isset($GLOBALS['googleAnalyticsCode']) && $GLOBALS['googleAnalyticsCode'] != ''):?>
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
