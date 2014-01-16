@@ -345,7 +345,7 @@ if ($currenttag!= '') {
                 filter($tag, 'url')
             );
 			$cats .= sprintf(
-                '<a href="%s" rel="tag">%s</a>, ',
+                '<a class="btn btn-sm btn-default" href="%s" rel="tag"><i class="fa fa-tag"></i>%s</a>, ',
                 $tagcaturl, filter($tag)
             );
 			$tagsForCopy .= $tag . ',';
@@ -358,10 +358,10 @@ if ($currenttag!= '') {
 		// Edit and delete links
 		$edit = '';
 		if ($bookmarkservice->editAllowed($row)) {
-			$edit = ' - <a href="' . createURL('edit', $row['bId']) . '">'
+			$edit = ' - <a class="btn btn-sm btn-default" href="' . createURL('edit', $row['bId']) . '"><i class="fa fa-edit"></i> '
                 . T_('Edit')
                 . '</a>'
-                . ' <a href="#" onclick="deleteBookmark(this, '. $row['bId'] .'); return false;">'
+                . ' <a class="btn btn-sm btn-default" href="#" onclick="deleteBookmark(this, '. $row['bId'] .'); return false;"><i class="fa fa-trash-o"></i> '
                 . T_('Delete')
                 .'</a>';
 		}
@@ -486,13 +486,13 @@ if ($currenttag!= '') {
             . $edit . "\n"
             . $update . "\n";
 		if ( isset($GLOBALS['enableQrCodes']) && $GLOBALS['enableQrCodes'] == true ) {
-			echo '<a href="#" class="qr-code-load"><i class="fa fa-qrcode"></i> QR Code</a>' . "\n";
+			echo '<a href="#" class="qr-code-load btn btn-sm btn-default"><i class="fa fa-qrcode"></i> QR Code</a> ' . "\n";
 		}
 		if ( isset($GLOBALS['pocheUrl']) && $GLOBALS['pocheUrl'] != '' ) {
-			echo '<a href="#" class="poche-share"><img src="' . $theme->resource('images/poche.png') . '" /> Poche</a>' . "\n";
+			echo '<a href="#" class="poche-share btn btn-sm btn-default"><img src="' . $theme->resource('images/poche.png') . '" /> Poche</a> ' . "\n";
 		}
 		if ( isset($GLOBALS['yourlsUrl']) && $GLOBALS['yourlsUrl'] != '' && isset($GLOBALS['yourlsApiKey']) && preg_match('#^[a-z0-9]{10}$#', $GLOBALS['yourlsApiKey']) ) {
-			echo '<a href="#" class="yourls-share"><img src="' . $theme->resource('images/yourls.png') . '" /> Yourls</a>' . "\n";
+			echo '<a href="#" class="yourls-share btn btn-sm btn-default"><img src="' . $theme->resource('images/yourls.png') . '" /> Yourls</a> ' . "\n";
 		}
 		echo "  </div>\n";
 		echo $privateNoteField != ''

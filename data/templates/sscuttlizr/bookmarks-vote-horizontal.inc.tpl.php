@@ -26,7 +26,7 @@ echo sprintf(
 
 if (isset($row['hasVoted'])) {
     if ($row['vote'] != 1) {
-        echo '<a class="vote-for" rel="nofollow" href="'
+        echo '<a class="btn btn-sm btn-default vote-for" rel="nofollow" href="'
             . createVoteURL(true, $row['bId']) . '"'
             . ' onclick="javascript:vote(' . $row['bId'] . ',1); return false;"'
             . '><i class="fa fa-thumbs-o-up"></i> ' . T_('Vote for') . '</a> ';
@@ -37,7 +37,7 @@ if (isset($row['hasVoted'])) {
     
     
     if ($row['vote'] != -1) {
-        echo '<a class="vote-against" rel="nofollow" href="'
+        echo '<a class="btn btn-sm btn-default vote-against" rel="nofollow" href="'
             . createVoteURL(false, $row['bId']) . '"'
             . ' onclick="vote(' . $row['bId'] . ',-1); return false;"'
             . '><i class="fa fa-thumbs-o-down"></i> ' . T_('Vote against') . '</a>';

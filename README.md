@@ -4,23 +4,10 @@ sscuttlizr
 About
 ------------
 
-Sscuttlizr is a theme for [SemanticScuttle](http://semanticscuttle.sourceforge.net/) 0.98.5 (http://sourceforge.net/projects/semanticscuttle/). It includes Modernizr, Bootstrap and Font-Awesome, is completely responsive, and includes most of HTML5 Boilerplate hooks and features.
+Sscuttlizr is a theme for [SemanticScuttle](http://semanticscuttle.sourceforge.net/) 0.98.5. It includes Modernizr, Bootstrap and Font-Awesome, is completely responsive, and includes most of HTML5 Boilerplate hooks and features.
 It is visually based on SemanticScuttle's default theme, but is slightly different in some opinionated details.
 
 This theme has been tested on the version 0.98.5 of SemanticScuttle.
-
-
-Installation
-------------
-
-1. Unzip theme and template
-2. Copy all the content of the "www" & "data" folders to their respective places in your SemanticScuttle installation
-3. Open config.php, and insert the following inside the PHP code:
-
-```
-$theme = 'sscuttlizr';
-```
-
 
 
 Theme features
@@ -38,6 +25,18 @@ Theme features
 * Optional support for sharing with [Poche](http://www.inthepoche.com/en)
 * Optional support for shortening with [Yourls](http://yourls.org/)
 * Optional support for [Jappix](http://jappix.org/) chat
+
+
+Installation
+------------
+
+1. Unzip theme and template
+2. Copy all the content of the "www" & "data" folders to their respective places in your SemanticScuttle installation
+3. Open config.php, and insert the following inside the PHP code:
+
+```
+$theme = 'sscuttlizr';
+```
 
 
 Optionnal .htaccess
