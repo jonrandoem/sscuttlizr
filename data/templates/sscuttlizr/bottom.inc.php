@@ -18,46 +18,48 @@ if($GLOBALS['enableWebsiteThumbnails']) {
 
 <?php if(isset($GLOBALS['enableJappix']) && $GLOBALS['enableJappix'] == true) { ?>
 <script type="text/javascript">
+	
 	jQuery.ajaxSetup({cache: true});
+	<?php 
+	$url = "";
+	if ( isset($GLOBALS['jappixUrl']) && $GLOBALS['jappixUrl'] != "" ) {
+		$url .= $GLOBALS['jappixUrl'];
+	} else {
+		$url .= "https://static.jappix.com";
+	}
+	$url .= '/php/get.php?l=';
+	$langs = array('ar', 'bg', 'cs', 'de', 'en', 'eo', 'es', 'et', 'fa', 'fr', 'he', 'hu', 'id', 'it', 'ja', 'la', 'lb', 
+									'mn', 'nl', 'oc', 'pl', 'pt-br', 'pt', 'ru', 'sk', 'sv', 'tr', 'uk', 'zh-cn', 'zh-tw');
+	if ( isset($GLOBALS['jappixLang']) && in_array($GLOBALS['jappixLang'], $langs) ) {
+		$url .= $GLOBALS['jappixLang'];
+	} else {
+		$url .= 'en';
+	}
+	$url .= '&t=js&g=mini.xml';
 
-	jQuery.getScript("<?php echo $GLOBALS['jappixUrl']; ?>/get.php?l=fr&t=js&g=mini.xml", function() {
-		JappixMini.launch({
-			connection: {
-				<?php if ( isset($GLOBALS['jappixAuth']) && $GLOBALS['jappixAuth'] == true ) {
-					echo 'user: \'' . $GLOBALS['jappixUser'] . '\',';
-					echo 'password: \'' . $GLOBALS['jappixPassword'] . '\',';
-				} ?>
-				domain: '<?php echo $GLOBALS['jappixDomain']; ?>',
-				resource: '<?php echo $GLOBALS['jappixResource']; ?>'
-			},
-			
-			application: {
-				network: {
-					autoconnect: false
-				},
+	$autoconnect = ( isset($GLOBALS['jappixAutoConnect']) && $GLOBALS['jappixAutoConnect'] == true ) ? 'true' : 'false';
 
-				interface: {
-					showpane: true,
-					animate: true
-				},
+	$animate = ( isset($GLOBALS['jappixAnimate']) && $GLOBALS['jappixAnimate'] == true ) ? 'true' : 'false';
 
-				user: {
-					random_nickname: true,
-					nickname: '<?php echo $GLOBALS['jappixNickname']; ?>'
-				},
+	$domain = ( isset($GLOBALS['jappixDomain']) && $GLOBALS['jappixDomain'] != "" ) ? $GLOBALS['jappixDomain'] : 'jappix.com';
 
-				chat: {
-					open: []
-				},
+	$paramStr = $autoconnect . ', ' . $animate . ', "' . $domain . '"';
+	if ( isset($GLOBALS['jappixAuth']) && $GLOBALS['jappixAuth'] == true && isset($GLOBALS['jappixUser']) && isset($GLOBALS['jappixPassword']) ) {
+		$paramStr .= ', "' . $GLOBALS['jappixUser'] . '", "' . $GLOBALS['jappixPassword'] . '"';
+	}
 
-				groupchat: {
-					open: [],
-					open_passwords: []
-				}
-			}
-		});
+	$groupChats = '';
+	if ( isset($GLOBALS['jappixGroupChats']) && is_array($GLOBALS['jappixGroupChats']) ) {
+		$groupChats .= 'MINI_GROUPCHATS = ["' . implode('", "', $GLOBALS['jappixGroupChats']) . '"];';
+	}
+
+	?>
+	jQuery.getScript("<?php echo $url; ?>", function() {
+		<?php echo $groupChats; ?>
+		launchMini(<?php echo $paramStr; ?>);
 		jQuery('#jappix_mini a.jm_pane').css('height', '25px');
 	});
+	jQuery('#jappix_mini a.jm_chat-tab').css('height', '25px');
 </script>
 
 <?php } ?>

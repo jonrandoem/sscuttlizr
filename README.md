@@ -151,14 +151,41 @@ You must have a functional Jappix installation to use this feature.
 By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
 
 ```
+// Enable the service
 $enableJappix = true;
-$jappixUrl = "https://chat.my-domain.com";
+
+//The Jappix server's URL. No trailing slash !!! And no final /php !
+$jappixUrl = "https://static.jappix.com";
+
+// Define the lang for Jappix
+// Choose one of the following:
+// ar bg cs de en eo es et fa fr he hu id it ja la lb
+// mn nl oc pl pt-br pt ru sk sv tr uk zh-cn zh-tw
+$jappixLang = 'fr';
+
+// Define the resource (as in 'What kind of resource is talking to Jappix?'). Choose any string you want.
+$jappixResource = "SemanticScuttle";
+
+// Define the the domain for your connection
+$jappixDomain = "anonymous.jappix.com";
+
+// Use the option below to disable anonymous mode
 $jappixAuth = true;
-$jappixUser = "john";
-$jappixPassword = "password";
-$jappixDomain = "my-domain.com";
-$jappixNickname = 'j0n';
-$jappixResource = "MySemanticScuttle";
+
+// With $jappixAuth to true, you can enable login with user and password
+// example: to connect on Jappix as dave@jappix.com, use the following:
+$jappixUser = "dave";
+$jappixPassword = "secret";
+
+// Auto-connect? Should work in anonymous or logged modes
+$jappixAutoConnect = true;
+
+// Animate JappixMini?
+$jappixAnimate = true;
+
+// Group chats to join at launch (you must provide an array of strings here)
+$jappixGroupChats = array("support@muc.jappix.org");
+
 ```
 
 Notes: 

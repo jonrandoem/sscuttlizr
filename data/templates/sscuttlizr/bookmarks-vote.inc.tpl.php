@@ -22,7 +22,7 @@ if (isset($row['hasVoted']) && !$row['hasVoted']) {
 echo '<span class="' . $classes . '" id="bmv-' . $row['bId'] . '">';
 
 if (isset($row['hasVoted']) && $row['vote'] != 1) {
-    echo '<a class="vote-for" rel="nofollow" href="'
+    echo '<a class="btn btn-sm btn-default vote-for" rel="nofollow" href="'
         . createVoteURL(true, $row['bId']) . '"'
         . ' onclick="javascript:vote(' . $row['bId'] . ',1); return false;"'
         . '>+</a>';
@@ -33,7 +33,7 @@ if (isset($row['hasVoted']) && $row['vote'] != 1) {
 echo '<span class="voting">' . $row['bVoting'] . '</span>';
 
 if (isset($row['hasVoted']) && $row['vote'] != -1) {
-    echo '<a class="vote-against" rel="nofollow" href="'
+    echo '<a class="btn btn-sm btn-default vote-against" rel="nofollow" href="'
         . createVoteURL(false, $row['bId']) . '"'
         . ' onclick="vote(' . $row['bId'] . ',-1); return false;"'
         . '>-</a>';
