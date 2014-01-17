@@ -88,21 +88,31 @@ You must have a functional Piwik installation to use this feature.
 By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
 
 ```
+// Set your Piwik Analytics ID here (a number)
+// Between quotes !!!
 $piwikAnalyticsSiteId = '1';
+
+// set the URL your Piwik installation, without protocol
+// example: if your Piwik is at https://my-piwik.org/stats/ ,
+// then, enter: my-piwik.org/stats
+// No Trailing slash !!!
 $piwikAnalyticsUrl = 'your.piwik.com';
 ```
 
 Notes: Do not enter any http:// or https:// in the URL, and enter your Piwik site ID between quotes.
 
+
 You can also enable the "noscript" image:
 
 ```
+// Enables the <noscript> image tag
 $piwikAnalyticsNoScript = true;
 ```
 
 And if you enable the "noscript" and your Piwik installation is served with HTTPS, you can force HTTPS for the "noscript" image:
 
 ```
+// If the <noscript> image tag is enabled, force the serve of the image only through HTTPS
 $piwikAnalyticsNoScriptHttps = true;
 ```
 
@@ -117,7 +127,8 @@ You must have a functional Poche installation to use this feature.
 By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
 
 ```
-$pocheUrl = 'https://my-poche.com';
+// The Poche URL. No Trailing slash !!!
+$pocheUrl = 'https://my-poche.com/readitlater';
 ```
 Notes: No trailing slash at the end of the URL !!
 
@@ -133,7 +144,11 @@ You must have a functional Yourls installation to use this feature.
 By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
 
 ```
+// The Yourls URL.
+// Be sure to insert the final script of the API (here: yourls-api.php)
 $yourlsUrl = 'https://my-yourls.com/yourls-api.php';
+
+// The Yourls signature token
 $yourlsApiKey = 'a1b2c3d4e5';
 ```
 
@@ -141,7 +156,7 @@ Notes: Be sure to enter the Yourls API path (e.g. yourls-api.php)
 
 
 
-Optionnal support for Jappix Mini
+Optionnal support for JappixMini
 ------------
 
 Sscuttlizr has support for [Jappix](http://jappix.org/) as a chat tool.
