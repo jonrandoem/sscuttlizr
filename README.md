@@ -178,7 +178,8 @@ $jappixUrl = "https://static.jappix.com";
 // mn nl oc pl pt-br pt ru sk sv tr uk zh-cn zh-tw
 $jappixLang = 'fr';
 
-// Define the resource (as in 'What kind of resource is talking to Jappix?'). Choose any string you want.
+// Define the resource (as in 'What kind of resource is talking to Jappix?').
+// Choose any string you want.
 $jappixResource = "SemanticScuttle";
 
 // Define the the domain for your connection
@@ -188,7 +189,9 @@ $jappixDomain = "anonymous.jappix.com";
 $jappixAuth = true;
 
 // With $jappixAuth to true, you can enable login with user and password
-// example: to connect on Jappix as dave@jappix.com, use the following:
+// On Jappix and Jabber in general, a login is like an email: user@domain.com
+// Here, the user part is defined below,
+// and the domain part is defined by $jappixDomain
 $jappixUser = "dave";
 $jappixPassword = "secret";
 
