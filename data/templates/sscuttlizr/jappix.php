@@ -20,14 +20,14 @@
 
 	$autoconnect = ( isset($GLOBALS['jappixAutoConnect']) && $GLOBALS['jappixAutoConnect'] == true ) ? 'true' : 'false';
 
-	$animate = ( isset($GLOBALS['jappixAnimate']) && $GLOBALS['jappixAnimate'] == true ) ? 'true' : 'false';
-
 	$domain = ( isset($GLOBALS['jappixDomain']) && $GLOBALS['jappixDomain'] != "" ) ? $GLOBALS['jappixDomain'] : 'jappix.com';
 
-	$paramStr = $autoconnect . ', ' . $animate . ', "' . $domain . '"';
+	$paramStr = $autoconnect . ', true, "' . $domain . '"';
 	if ( isset($GLOBALS['jappixAuth']) && $GLOBALS['jappixAuth'] == true && isset($GLOBALS['jappixUser']) && isset($GLOBALS['jappixPassword']) ) {
 		$paramStr .= ', "' . $GLOBALS['jappixUser'] . '", "' . $GLOBALS['jappixPassword'] . '"';
 	}
+
+	$animate = ( isset($GLOBALS['jappixAnimate']) && $GLOBALS['jappixAnimate'] == true ) ? 'MINI_ANIMATE = true;' : 'MINI_ANIMATE = false;';
 
 	$groupChats = '';
 	if ( isset($GLOBALS['jappixGroupChats']) && is_array($GLOBALS['jappixGroupChats']) ) {
@@ -37,6 +37,7 @@
 	?>
 	jQuery.getScript("<?php echo $url; ?>", function() {
 		<?php echo $groupChats; ?>
+		<?php echo $animate; ?>
 		launchMini(<?php echo $paramStr; ?>);
 		jQuery('#jappix_mini a.jm_pane').css('height', '25px');
 	});
