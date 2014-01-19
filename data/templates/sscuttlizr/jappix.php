@@ -29,6 +29,8 @@
 
 	$animate = ( isset($GLOBALS['jappixAnimate']) && $GLOBALS['jappixAnimate'] == true ) ? 'MINI_ANIMATE = true;' : 'MINI_ANIMATE = false;';
 
+	$nick = ( isset($GLOBALS['jappixNickName']) && $GLOBALS['jappixNickName'] != '' ) ? 'MINI_RANDNICK = true; MINI_NICKNAME = "' . $GLOBALS['jappixNickName'] . '";' : 'MINI_RANDNICK = true;';
+
 	$groupChats = '';
 	if ( isset($GLOBALS['jappixGroupChats']) && is_array($GLOBALS['jappixGroupChats']) ) {
 		$groupChats .= 'MINI_GROUPCHATS = ["' . implode('", "', $GLOBALS['jappixGroupChats']) . '"];';
@@ -38,6 +40,7 @@
 	jQuery.getScript("<?php echo $url; ?>", function() {
 		<?php echo $groupChats; ?>
 		<?php echo $animate; ?>
+		<?php echo $nick ?>
 		launchMini(<?php echo $paramStr; ?>);
 		jQuery('#jappix_mini a.jm_pane').css('height', '25px');
 	});

@@ -198,6 +198,10 @@ $jappixPassword = "secret";
 // Auto-connect? Should work in anonymous or logged modes
 $jappixAutoConnect = true;
 
+// Define your Jappix Nickname
+// if not defined or if equals to "", a random nickname will be chosen
+$jappixNickName = "davZ";
+
 // Animate JappixMini?
 $jappixAnimate = true;
 
