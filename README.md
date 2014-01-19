@@ -203,6 +203,8 @@ $jappixAutoConnect = true;
 $jappixNickName = "davZ";
 
 // Animate JappixMini?
+// Note that the animation only occurs if $jappixAutoConnect equals false
+// and if $jappixGroupChats is an empty array or is not defined.
 $jappixAnimate = true;
 
 // Group chats to join at launch (you must provide an array of strings here)
