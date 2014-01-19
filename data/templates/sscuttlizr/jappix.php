@@ -29,6 +29,8 @@
 
 	$animate = ( isset($GLOBALS['jappixAnimate']) && $GLOBALS['jappixAnimate'] == true ) ? 'MINI_ANIMATE = true;' : 'MINI_ANIMATE = false;';
 
+	$resource = ( isset($GLOBALS['jappixResource']) && $GLOBALS['jappixResource'] != "" ) ? 'MINI_RESOURCE = "' . $GLOBALS['jappixResource'] . '";' : 'SemanticScuttle';
+
 	$nick = ( isset($GLOBALS['jappixNickName']) && $GLOBALS['jappixNickName'] != '' ) ? 'MINI_RANDNICK = true; MINI_NICKNAME = "' . $GLOBALS['jappixNickName'] . '";' : 'MINI_RANDNICK = true;';
 
 	$groupChats = '';
@@ -41,6 +43,7 @@
 		<?php echo $groupChats; ?>
 		<?php echo $animate; ?>
 		<?php echo $nick ?>
+		<?php echo $resource ?>
 		launchMini(<?php echo $paramStr; ?>);
 		jQuery('#jappix_mini a.jm_pane').css('height', '25px');
 	});
