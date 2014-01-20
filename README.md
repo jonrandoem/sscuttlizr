@@ -217,6 +217,10 @@ $jappixAnimate = true;
 // If not defined, it defaults to 'https://mini.jappix.com/issues'
 $jappixErrorLink = 'https://mini.jappix.com/issues';
 
+// Disable JappixMini on mobile devices?
+// default: false
+$jappixDisableMobile = true;
+
 // Group chats to join at launch (you must provide an array of strings here)
 $jappixGroupChats = array("support@muc.jappix.org");
 

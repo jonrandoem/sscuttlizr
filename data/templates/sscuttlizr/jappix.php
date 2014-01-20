@@ -50,6 +50,8 @@ if ( $show == true ) {
 
 		$error = ( isset($GLOBALS['jappixErrorLink']) && $GLOBALS['jappixErrorLink'] != '' ) ? 'MINI_ERROR_LINK = "' . $GLOBALS['jappixErrorLink'] . '";' : 'MINI_ERROR_LINK = https://mini.jappix.com/issues;';
 
+		$disableMobile = ( isset($GLOBALS['jappixDisableMobile']) && $GLOBALS['jappixDisableMobile'] == true ) ? 'MINI_DISABLE_MOBILE = true;' : 'MINI_DISABLE_MOBILE = false;';
+
 		$groupChats = '';
 		if ( isset($GLOBALS['jappixGroupChats']) && is_array($GLOBALS['jappixGroupChats']) ) {
 			$groupChats .= 'MINI_GROUPCHATS = ["' . implode('", "', $GLOBALS['jappixGroupChats']) . '"];';
@@ -62,6 +64,7 @@ if ( $show == true ) {
 			<?php echo $nick ?>
 			<?php echo $resource ?>
 			<?php echo $error ?>
+			<?php echo $disableMobile ?>
 			launchMini(<?php echo $paramStr; ?>);
 			jQuery('#jappix_mini a.jm_pane').css('height', '25px');
 		});
