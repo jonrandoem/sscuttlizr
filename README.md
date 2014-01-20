@@ -169,6 +169,12 @@ By default, this functionality is disabled. To enable it, open your config.php f
 // Enable the service
 $enableJappix = true;
 
+// Enable JappixMini only for logged users
+$jappixEnableForLogged = true;
+
+// Enable JappixMini only for logged admins
+$jappixEnableForAdmin = true;
+
 //The Jappix server's URL. No trailing slash !!! And no final /php !
 $jappixUrl = "https://static.jappix.com";
 
