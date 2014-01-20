@@ -213,6 +213,10 @@ $jappixNickName = "davZ";
 // and if $jappixGroupChats is an empty array or is not defined.
 $jappixAnimate = true;
 
+// Define the error URL (URL of the link that will be displayed if connection fails
+// If not defined, it defaults to 'https://mini.jappix.com/issues'
+$jappixErrorLink = 'https://mini.jappix.com/issues';
+
 // Group chats to join at launch (you must provide an array of strings here)
 $jappixGroupChats = array("support@muc.jappix.org");
 
