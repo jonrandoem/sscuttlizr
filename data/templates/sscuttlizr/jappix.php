@@ -57,6 +57,8 @@ if ( $show == true ) {
 			$groupChats .= 'MINI_GROUPCHATS = ["' . implode('", "', $GLOBALS['jappixGroupChats']) . '"];';
 		}
 
+		$title = ( isset($GLOBALS['jappixTitle']) && $GLOBALS['jappixTitle'] != "" ) ? 'MINI_TITLE = "' . $GLOBALS['jappixTitle'] . '";' : 'Chat';
+
 		?>
 		jQuery.getScript("<?php echo $url; ?>", function() {
 			<?php echo $groupChats; ?>
@@ -64,6 +66,7 @@ if ( $show == true ) {
 			<?php echo $nick ?>
 			<?php echo $resource ?>
 			<?php echo $error ?>
+			<?php echo $title ?>
 			<?php echo $disableMobile ?>
 			launchMini(<?php echo $paramStr; ?>);
 			jQuery('#jappix_mini a.jm_pane').css('height', '25px');

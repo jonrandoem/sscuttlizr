@@ -226,6 +226,10 @@ $jappixNickName = "davZ";
 // default: false
 $jappixAnimate = true;
 
+// Define JappixMini title
+// default: 'Chat'
+$jappixTitle = 'Chat';
+
 // Define the error URL (URL of the link that will be displayed if connection fails
 // If not defined, it defaults to 'https://mini.jappix.com/issues'
 // default: "https://mini.jappix.com/issues"
