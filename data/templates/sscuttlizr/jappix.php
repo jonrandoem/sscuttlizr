@@ -70,8 +70,12 @@ if ( $show == true ) {
 			<?php echo $disableMobile ?>
 			launchMini(<?php echo $paramStr; ?>);
 			jQuery('#jappix_mini a.jm_pane').css('height', '25px');
+			jQuery('#jappix_mini a.jm_chat-tab, #jappix_mini a.jm_chat-tab.jm_clicked').css('height', '25px');
+			jQuery('#jappix_mini div.jm_actions').css('height', '25px');
+			jQuery('#jappix_mini div.jm_status_picker a, #jappix_mini div.jm_chan_suggest a').css('height', '20px');
+			jQuery('#jappix_mini div.jm_status_picker, #jappix_mini div.jm_chan_suggest').css('top', '24px');
 		});
-		jQuery('#jappix_mini a.jm_chat-tab, #jappix_mini a.jm_chat-tab.jm_clicked').css('height', '25px');
+		
 	</script>
 	<?php
 }
