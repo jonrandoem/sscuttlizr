@@ -71,7 +71,7 @@ if ( $show == true ) {
 			launchMini(<?php echo $paramStr; ?>);
 			jQuery('#jappix_mini a.jm_pane').css('height', '25px');
 		});
-		jQuery('#jappix_mini a.jm_chat-tab').css('height', '25px');
+		jQuery('#jappix_mini a.jm_chat-tab, #jappix_mini a.jm_chat-tab.jm_clicked').css('height', '25px');
 	</script>
 	<?php
 }
