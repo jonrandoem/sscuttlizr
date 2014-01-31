@@ -22,13 +22,13 @@
 	
 	<script type="text/javascript" src="<?php echo ROOT ?>js/sscuttlizr/modernizr.min.js"></script>
 	<?php if (DEBUG_MODE) : ?>
-		<script type="text/javascript" src="<?php echo ROOT ?>js/sscuttlizr/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="<?php echo ROOT ?>js/sscuttlizr/jquery-1.11.0.js"></script>
 		<script type="text/javascript" src="<?php echo ROOT_JS ?>jquery.jstree.js"></script>
 		<script type="text/javascript" src="<?php echo ROOT ?>js/sscuttlizr/bootstrap.js"></script>
 	<?php else: ?>
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script>
-			window.jQuery || document.write('<script src="<?php echo ROOT ?>js/sscuttlizr/jquery-1.10.2.min.js"><\/script>')
+			window.jQuery || document.write('<script src="<?php echo ROOT ?>js/sscuttlizr/jquery-1.11.0.min.js"><\/script>')
 		</script>
 		<script type="text/javascript" src="<?php echo ROOT_JS ?>jquery.jstree.min.js"></script>
 		<script type="text/javascript" src="<?php echo ROOT ?>js/sscuttlizr/bootstrap.min.js"></script>
