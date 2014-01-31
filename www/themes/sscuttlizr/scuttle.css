@@ -139,6 +139,7 @@ th {
     margin: 0;
 		background: url('images/logo.png') no-repeat 10px;
     padding-left: 75px;
+		padding-bottom: 35px;
 }
 
 .popup .navbar-brand {
