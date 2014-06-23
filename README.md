@@ -281,3 +281,11 @@ License
 ------------
 
 This theme is licensed under [MIT License](https://github.com/jonrandoem/sscuttlizr/blob/master/LICENSE).
+
+
+Stats
+-----------
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jonrandoem/sscuttlizr/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+
