@@ -134,13 +134,13 @@ jQuery(document).ready(function () {
 	});
 });
 <?php } ?>
-<?php if ( isset($GLOBALS['pocheUrl']) && $GLOBALS['pocheUrl'] != '' ) { ?>
+<?php if ( isset($GLOBALS['wallabagUrl']) && $GLOBALS['wallabagUrl'] != '' ) { ?>
 jQuery(document).ready(function () {
-	jQuery('.poche-share').click(function() {
+	jQuery('.wallabag-share').click(function() {
 		var bk = jQuery(this).parent().parent();
 		var url = bk.find('.link a').attr('href');
-		url = '<?php echo $GLOBALS['pocheUrl']; ?>/index.php?action=add&plainurl=' + encodeURIComponent(url) + '&autoclose=true';
-		window.open(url, 'poche', 'toolbar=no,width=800,height=600');
+		url = '<?php echo $GLOBALS['wallabagUrl']; ?>/index.php?action=add&plainurl=' + encodeURIComponent(url) + '&autoclose=true';
+		window.open(url, 'wallabag', 'toolbar=no,width=800,height=600');
 		return false;
 	});
 });

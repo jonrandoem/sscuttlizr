@@ -22,7 +22,7 @@ Theme features
 * Use of Font-Awesome icons
 * Hooks from HTML5Boilerplate: Apache server config (via .htaccess), ChromeFrame, crossdomain.xml
 * Optional support for [Piwik](http://piwik.org/) Analytics
-* Optional support for sharing with [Poche](http://www.inthepoche.com/en)
+* Optional support for sharing with [Wallabag (previously named Poche)](https://www.wallabag.org/)
 * Optional support for shortening with [Yourls](http://yourls.org/)
 * Optional support for [Jappix](http://jappix.org/) chat
 
@@ -117,18 +117,18 @@ $piwikAnalyticsNoScriptHttps = true;
 ```
 
 
-Optionnal support for Poche
+Optionnal support for Wallabag (previously named Poche)
 ------------
 
-Sscuttlizr has support for [Poche](http://www.inthepoche.com/en) as a bookmark sharing tool.
+Sscuttlizr has support for [Wallabag](https://www.wallabag.org/) as a bookmark sharing tool.
 
-You must have a functional Poche installation to use this feature.
+You must have a functional Wallabag installation to use this feature.
 
 By default, this functionality is disabled. To enable it, open your config.php file, and insert the following inside the PHP code:
 
 ```
 // The Poche URL. No Trailing slash !!!
-$pocheUrl = 'https://my-poche.com/readitlater';
+$wallabagUrl = 'https://my-wallabag.com/readitlater';
 ```
 Notes: No trailing slash at the end of the URL !!
 
@@ -272,7 +272,7 @@ Thanks to
 
 * [SemanticScuttle](http://semanticscuttle.sourceforge.net/)
 * [Piwik](http://piwik.org/)
-* [Poche](http://www.inthepoche.com/en)
+* [Wallabag](https://www.wallabag.org/)
 * [Yourls](http://yourls.org/)
 * [Jappix](http://jappix.org/)
 
